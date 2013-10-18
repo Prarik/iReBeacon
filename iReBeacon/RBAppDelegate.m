@@ -8,11 +8,13 @@
 
 #import "RBAppDelegate.h"
 
-// Parse Framework
-#import <Parse/Parse.h>
-
 // Facebook SDK
 #import <FacebookSDK/FacebookSDK.h>
+
+// Parse Framework
+#import <Parse/Parse.h>
+#import "RBProduct.h"
+
 
 @implementation RBAppDelegate
 
@@ -34,7 +36,8 @@
     [defaultACL setPublicWriteAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
-    
+    // Register parse subclasses
+    [RBProduct registerSubclass];
     
     
     return YES;

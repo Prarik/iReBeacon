@@ -22,6 +22,7 @@
 		DD3E1A711811079B003FBA3B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A531811079B003FBA3B /* UIKit.framework */; };
 		DD3E1A791811079B003FBA3B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD3E1A771811079B003FBA3B /* InfoPlist.strings */; };
 		DD3E1A7B1811079B003FBA3B /* iReBeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3E1A7A1811079B003FBA3B /* iReBeaconTests.m */; };
+		DD6BCB62181114EE001A04EC /* RBProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB61181114EE001A04EC /* RBProduct.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		DD3E1A761811079B003FBA3B /* iReBeaconTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iReBeaconTests-Info.plist"; sourceTree = "<group>"; };
 		DD3E1A781811079B003FBA3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD3E1A7A1811079B003FBA3B /* iReBeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iReBeaconTests.m; sourceTree = "<group>"; };
+		DD6BCB60181114EE001A04EC /* RBProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBProduct.h; sourceTree = "<group>"; };
+		DD6BCB61181114EE001A04EC /* RBProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBProduct.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,8 @@
 		DD3E1A8418110F66003FBA3B /* models */ = {
 			isa = PBXGroup;
 			children = (
+				DD6BCB60181114EE001A04EC /* RBProduct.h */,
+				DD6BCB61181114EE001A04EC /* RBProduct.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				DD3E1A601811079B003FBA3B /* RBAppDelegate.m in Sources */,
 				DD3E1A5C1811079B003FBA3B /* main.m in Sources */,
 				DD3E1A661811079B003FBA3B /* RBViewController.m in Sources */,
+				DD6BCB62181114EE001A04EC /* RBProduct.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
