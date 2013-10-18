@@ -8,11 +8,29 @@
 
 #import "RBAppDelegate.h"
 
+// Parse Framework
+#import <Parse/Parse.h>
+
 @implementation RBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
+    // Init Parse Framework
+    [Parse setApplicationId:@"CjCCEay3GsKEOU8fSt4fXOwueFcadW3u2v8tQQvs"
+                  clientKey:@"wTNipuNwfhBny33w0pdF5AwkLrrF7Ft7FlDCamvc"];
+    
+    // Init Parse Analytics
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    // Setting ACL
+    [PFUser enableAutomaticUser];
+    PFACL *defaultACL = [PFACL ACL];
+    // Optionally enable public read access while disabling public write access.
+    [defaultACL setPublicReadAccess:YES];
+    [defaultACL setPublicWriteAccess:YES];
+    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+    
     return YES;
 }
 							
