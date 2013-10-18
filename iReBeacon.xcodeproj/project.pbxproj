@@ -23,6 +23,8 @@
 		DD3E1A791811079B003FBA3B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD3E1A771811079B003FBA3B /* InfoPlist.strings */; };
 		DD3E1A7B1811079B003FBA3B /* iReBeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3E1A7A1811079B003FBA3B /* iReBeaconTests.m */; };
 		DD6BCB62181114EE001A04EC /* RBProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB61181114EE001A04EC /* RBProduct.m */; };
+		DD6BCB6518111B27001A04EC /* RBCoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB6418111B27001A04EC /* RBCoupon.m */; };
+		DD6BCB68181120A8001A04EC /* RBDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB67181120A8001A04EC /* RBDeal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,10 @@
 		DD3E1A7A1811079B003FBA3B /* iReBeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iReBeaconTests.m; sourceTree = "<group>"; };
 		DD6BCB60181114EE001A04EC /* RBProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBProduct.h; sourceTree = "<group>"; };
 		DD6BCB61181114EE001A04EC /* RBProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBProduct.m; sourceTree = "<group>"; };
+		DD6BCB6318111B27001A04EC /* RBCoupon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCoupon.h; sourceTree = "<group>"; };
+		DD6BCB6418111B27001A04EC /* RBCoupon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCoupon.m; sourceTree = "<group>"; };
+		DD6BCB66181120A8001A04EC /* RBDeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDeal.h; sourceTree = "<group>"; };
+		DD6BCB67181120A8001A04EC /* RBDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDeal.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,10 @@
 			children = (
 				DD6BCB60181114EE001A04EC /* RBProduct.h */,
 				DD6BCB61181114EE001A04EC /* RBProduct.m */,
+				DD6BCB6318111B27001A04EC /* RBCoupon.h */,
+				DD6BCB6418111B27001A04EC /* RBCoupon.m */,
+				DD6BCB66181120A8001A04EC /* RBDeal.h */,
+				DD6BCB67181120A8001A04EC /* RBDeal.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -307,6 +317,8 @@
 				DD3E1A601811079B003FBA3B /* RBAppDelegate.m in Sources */,
 				DD3E1A5C1811079B003FBA3B /* main.m in Sources */,
 				DD3E1A661811079B003FBA3B /* RBViewController.m in Sources */,
+				DD6BCB68181120A8001A04EC /* RBDeal.m in Sources */,
+				DD6BCB6518111B27001A04EC /* RBCoupon.m in Sources */,
 				DD6BCB62181114EE001A04EC /* RBProduct.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

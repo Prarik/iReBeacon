@@ -1,25 +1,24 @@
 //
-//  RBProduct.m
+//  RBCoupon.m
 //  iReBeacon
 //
 //  Created by Giuseppe Macrì on 10/18/13.
 //  Copyright (c) 2013 giuseppem. All rights reserved.
 //
 
-#import "RBProduct.h"
+#import "RBCoupon.h"
 
-@implementation RBProduct
+@implementation RBCoupon
 
-@dynamic name;
-@dynamic brand;
+@dynamic code;
+@dynamic product;
 @dynamic description;
-@dynamic department;
 @dynamic pictureUrl;
+@dynamic lastDay;
 
-@dynamic featured;
 
 + (NSString *)parseClassName {
-    return @"Product";
+    return @"Coupon";
 }
 
 @end

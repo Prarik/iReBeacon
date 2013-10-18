@@ -14,6 +14,8 @@
 // Parse Framework
 #import <Parse/Parse.h>
 #import "RBProduct.h"
+#import "RBDeal.h"
+#import "RBCoupon.h"
 
 
 @implementation RBAppDelegate
@@ -38,6 +40,8 @@
     
     // Register parse subclasses
     [RBProduct registerSubclass];
+    [RBDeal registerSubclass];
+    [RBCoupon registerSubclass];
     
     
     return YES;

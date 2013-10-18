@@ -1,5 +1,5 @@
 //
-//  RBProduct.h
+//  RBCoupon.h
 //  iReBeacon
 //
 //  Created by Giuseppe Macrì on 10/18/13.
@@ -8,15 +8,13 @@
 
 #import <Parse/Parse.h>
 
-@interface RBProduct : PFObject<PFSubclassing>
+@interface RBCoupon : PFObject<PFSubclassing>
 
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *brand;
+@property (strong, nonatomic) NSString *code;
+@property (strong, nonatomic) NSString *product;
 @property (strong, nonatomic) NSString *description;
-@property (strong, nonatomic) NSString *department;
 @property (strong, nonatomic) NSString *pictureUrl;
-
-@property (nonatomic) BOOL featured;
+@property (strong, nonatomic) NSDate *lastDay;
 
 + (NSString *)parseClassName;
 
