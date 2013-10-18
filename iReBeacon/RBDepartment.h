@@ -11,7 +11,7 @@
 @interface RBDepartment : PFObject<PFSubclassing>
 
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *brand;
+@property (strong, nonatomic) NSString *description;
 @property (strong, nonatomic) NSString *pictureUrl;
 
 + (NSString *)parseClassName;

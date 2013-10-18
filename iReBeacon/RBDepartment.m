@@ -11,7 +11,7 @@
 @implementation RBDepartment
 
 @dynamic name;
-@dynamic brand;
+@dynamic description;
 @dynamic pictureUrl;
 
 + (NSString *)parseClassName {
