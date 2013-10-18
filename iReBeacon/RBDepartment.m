@@ -12,7 +12,7 @@
 
 @dynamic name;
 @dynamic description;
-@dynamic pictureUrl;
+@dynamic pictureURL;
 
 + (NSString *)parseClassName {
     return @"Department";

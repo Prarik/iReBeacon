@@ -14,7 +14,7 @@
 @dynamic brand;
 @dynamic description;
 @dynamic department;
-@dynamic pictureUrl;
+@dynamic pictureURL;
 
 @dynamic featured;
 

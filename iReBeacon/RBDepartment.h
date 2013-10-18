@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *description;
-@property (strong, nonatomic) NSString *pictureUrl;
+@property (strong, nonatomic) NSString *pictureURL;
 
 + (NSString *)parseClassName;
 

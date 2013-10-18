@@ -13,7 +13,7 @@
 @dynamic code;
 @dynamic product;
 @dynamic description;
-@dynamic pictureUrl;
+@dynamic pictureURL;
 @dynamic lastDay;
 
 

@@ -14,7 +14,7 @@
 @property (strong, nonatomic) NSString *brand;
 @property (strong, nonatomic) NSString *description;
 @property (strong, nonatomic) NSString *department;
-@property (strong, nonatomic) NSString *pictureUrl;
+@property (strong, nonatomic) NSString *pictureURL;
 
 @property (nonatomic) BOOL featured;
 
