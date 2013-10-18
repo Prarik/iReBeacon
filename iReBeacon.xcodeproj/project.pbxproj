@@ -25,6 +25,7 @@
 		DD6BCB62181114EE001A04EC /* RBProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB61181114EE001A04EC /* RBProduct.m */; };
 		DD6BCB6518111B27001A04EC /* RBCoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB6418111B27001A04EC /* RBCoupon.m */; };
 		DD6BCB68181120A8001A04EC /* RBDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB67181120A8001A04EC /* RBDeal.m */; };
+		DD6BCB6B1811238B001A04EC /* RBDepartment.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB6A1811238B001A04EC /* RBDepartment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		DD6BCB6418111B27001A04EC /* RBCoupon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCoupon.m; sourceTree = "<group>"; };
 		DD6BCB66181120A8001A04EC /* RBDeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDeal.h; sourceTree = "<group>"; };
 		DD6BCB67181120A8001A04EC /* RBDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDeal.m; sourceTree = "<group>"; };
+		DD6BCB691811238B001A04EC /* RBDepartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDepartment.h; sourceTree = "<group>"; };
+		DD6BCB6A1811238B001A04EC /* RBDepartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDepartment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 		DD3E1A8418110F66003FBA3B /* models */ = {
 			isa = PBXGroup;
 			children = (
+				DD6BCB691811238B001A04EC /* RBDepartment.h */,
+				DD6BCB6A1811238B001A04EC /* RBDepartment.m */,
 				DD6BCB60181114EE001A04EC /* RBProduct.h */,
 				DD6BCB61181114EE001A04EC /* RBProduct.m */,
 				DD6BCB6318111B27001A04EC /* RBCoupon.h */,
@@ -317,6 +322,7 @@
 				DD3E1A601811079B003FBA3B /* RBAppDelegate.m in Sources */,
 				DD3E1A5C1811079B003FBA3B /* main.m in Sources */,
 				DD3E1A661811079B003FBA3B /* RBViewController.m in Sources */,
+				DD6BCB6B1811238B001A04EC /* RBDepartment.m in Sources */,
 				DD6BCB68181120A8001A04EC /* RBDeal.m in Sources */,
 				DD6BCB6518111B27001A04EC /* RBCoupon.m in Sources */,
 				DD6BCB62181114EE001A04EC /* RBProduct.m in Sources */,

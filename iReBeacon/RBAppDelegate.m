@@ -16,6 +16,7 @@
 #import "RBProduct.h"
 #import "RBDeal.h"
 #import "RBCoupon.h"
+#import "RBDepartment.h"
 
 
 @implementation RBAppDelegate
@@ -39,6 +40,7 @@
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
     // Register parse subclasses
+    [RBDepartment registerSubclass];
     [RBProduct registerSubclass];
     [RBDeal registerSubclass];
     [RBCoupon registerSubclass];
