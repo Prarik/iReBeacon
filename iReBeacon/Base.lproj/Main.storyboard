@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -54,9 +54,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsk-QH-fEk">
-                                <rect key="frame" x="141" y="132" width="39" height="30"/>
+                                <rect key="frame" x="20" y="167" width="102" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="x6C-Yv-OcT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Deals">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -64,29 +70,38 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-NX-yLp">
-                                <rect key="frame" x="116" y="222" width="89" height="30"/>
+                                <rect key="frame" x="20" y="276" width="102" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Departments">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="ozP-Bv-JK1" kind="push" id="w8L-SW-JXJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTB-Qk-IC0">
-                                <rect key="frame" x="129" y="314" width="63" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTB-Qk-IC0">
+                                <rect key="frame" x="198" y="167" width="102" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Coupons">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="azk-oZ-IuY" kind="push" id="hBG-YT-0Sx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubk-IG-IqK">
-                                <rect key="frame" x="129" y="405" width="62" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubk-IG-IqK">
+                                <rect key="frame" x="198" y="276" width="102" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Products">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -96,14 +111,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="g9h-NX-yLp" firstAttribute="centerX" secondItem="Lsk-QH-fEk" secondAttribute="centerX" id="0t7-gT-eib"/>
-                            <constraint firstItem="Ubk-IG-IqK" firstAttribute="leading" secondItem="xTB-Qk-IC0" secondAttribute="leading" id="HB7-Kg-AH7"/>
-                            <constraint firstItem="g9h-NX-yLp" firstAttribute="top" secondItem="Lsk-QH-fEk" secondAttribute="bottom" constant="60" id="I3Q-me-6Yl"/>
-                            <constraint firstItem="Ubk-IG-IqK" firstAttribute="top" secondItem="xTB-Qk-IC0" secondAttribute="bottom" constant="61" id="Ldo-8g-Dgv"/>
-                            <constraint firstItem="Lsk-QH-fEk" firstAttribute="centerX" secondItem="sOU-e3-zLp" secondAttribute="centerX" id="MVS-4P-f2V"/>
-                            <constraint firstItem="g9h-NX-yLp" firstAttribute="centerX" secondItem="xTB-Qk-IC0" secondAttribute="centerX" id="RRk-oj-BvO"/>
-                            <constraint firstItem="xTB-Qk-IC0" firstAttribute="top" secondItem="g9h-NX-yLp" secondAttribute="bottom" constant="62" id="kur-sb-3N8"/>
-                            <constraint firstItem="g9h-NX-yLp" firstAttribute="centerY" secondItem="sOU-e3-zLp" secondAttribute="centerY" constant="-47" id="vzE-h9-03E"/>
+                            <constraint firstItem="xTB-Qk-IC0" firstAttribute="leading" secondItem="Ubk-IG-IqK" secondAttribute="leading" id="954-ry-adm"/>
+                            <constraint firstItem="Lsk-QH-fEk" firstAttribute="top" secondItem="zKY-dp-qG0" secondAttribute="bottom" constant="103" id="9Tu-4l-p3N"/>
+                            <constraint firstAttribute="trailing" secondItem="xTB-Qk-IC0" secondAttribute="trailing" constant="20" symbolic="YES" id="EbL-yu-QCh"/>
+                            <constraint firstItem="g9h-NX-yLp" firstAttribute="top" secondItem="Lsk-QH-fEk" secondAttribute="bottom" constant="79" id="JN9-bT-k9X"/>
+                            <constraint firstItem="Lsk-QH-fEk" firstAttribute="leading" secondItem="sOU-e3-zLp" secondAttribute="leading" constant="20" symbolic="YES" id="Jjh-Jd-1Vi"/>
+                            <constraint firstItem="g9h-NX-yLp" firstAttribute="trailing" secondItem="Lsk-QH-fEk" secondAttribute="trailing" id="LZ5-Jv-OiN"/>
+                            <constraint firstItem="Ubk-IG-IqK" firstAttribute="trailing" secondItem="xTB-Qk-IC0" secondAttribute="trailing" id="QFL-9T-ORz"/>
+                            <constraint firstItem="g9h-NX-yLp" firstAttribute="leading" secondItem="Lsk-QH-fEk" secondAttribute="leading" id="SXa-sf-I4A"/>
+                            <constraint firstItem="Lsk-QH-fEk" firstAttribute="baseline" secondItem="xTB-Qk-IC0" secondAttribute="baseline" id="UlM-Sk-n8g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IUg-yO-Q0f"/>
