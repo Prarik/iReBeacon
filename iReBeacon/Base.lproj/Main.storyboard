@@ -20,14 +20,16 @@
                                 <rect key="frame" x="60" y="254" width="200" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="MfT-rt-Ie4"/>
+                                    <constraint firstAttribute="height" constant="60" id="wFX-Um-vQV"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Uf0-xR-Ch5" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="9ta-aK-gh9"/>
                             <constraint firstItem="Uf0-xR-Ch5" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="AU7-ah-LOr"/>
-                            <constraint firstItem="Uf0-xR-Ch5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="60" id="KyO-Gj-aqU"/>
-                            <constraint firstItem="Uf0-xR-Ch5" firstAttribute="top" secondItem="4lC-Ba-1gP" secondAttribute="bottom" constant="234" id="uKr-Wa-ptf"/>
                         </constraints>
                     </view>
                 </viewController>
