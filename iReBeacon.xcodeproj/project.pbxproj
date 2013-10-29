@@ -15,7 +15,7 @@
 		DD3E1A5C1811079B003FBA3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3E1A5B1811079B003FBA3B /* main.m */; };
 		DD3E1A601811079B003FBA3B /* RBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3E1A5F1811079B003FBA3B /* RBAppDelegate.m */; };
 		DD3E1A631811079B003FBA3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3E1A611811079B003FBA3B /* Main.storyboard */; };
-		DD3E1A661811079B003FBA3B /* RBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3E1A651811079B003FBA3B /* RBViewController.m */; };
+		DD3E1A661811079B003FBA3B /* RBAccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3E1A651811079B003FBA3B /* RBAccessViewController.m */; };
 		DD3E1A681811079B003FBA3B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD3E1A671811079B003FBA3B /* Images.xcassets */; };
 		DD3E1A6F1811079B003FBA3B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A6E1811079B003FBA3B /* XCTest.framework */; };
 		DD3E1A701811079B003FBA3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A4F1811079B003FBA3B /* Foundation.framework */; };
@@ -26,6 +26,10 @@
 		DD6BCB6518111B27001A04EC /* RBCoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB6418111B27001A04EC /* RBCoupon.m */; };
 		DD6BCB68181120A8001A04EC /* RBDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB67181120A8001A04EC /* RBDeal.m */; };
 		DD6BCB6B1811238B001A04EC /* RBDepartment.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB6A1811238B001A04EC /* RBDepartment.m */; };
+		EF287F081818857E0053EF53 /* RBCouponListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287F071818857E0053EF53 /* RBCouponListViewController.m */; };
+		EF287F0B181887090053EF53 /* RBDealListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287F0A181887090053EF53 /* RBDealListViewController.m */; };
+		EF287F0E181887160053EF53 /* RBProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287F0D181887160053EF53 /* RBProductListViewController.m */; };
+		EFF9843518188151002A72BE /* RBDepartmentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF9843418188151002A72BE /* RBDepartmentListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +56,8 @@
 		DD3E1A5E1811079B003FBA3B /* RBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBAppDelegate.h; sourceTree = "<group>"; };
 		DD3E1A5F1811079B003FBA3B /* RBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBAppDelegate.m; sourceTree = "<group>"; };
 		DD3E1A621811079B003FBA3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DD3E1A641811079B003FBA3B /* RBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBViewController.h; sourceTree = "<group>"; };
-		DD3E1A651811079B003FBA3B /* RBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBViewController.m; sourceTree = "<group>"; };
+		DD3E1A641811079B003FBA3B /* RBAccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBAccessViewController.h; sourceTree = "<group>"; };
+		DD3E1A651811079B003FBA3B /* RBAccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBAccessViewController.m; sourceTree = "<group>"; };
 		DD3E1A671811079B003FBA3B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DD3E1A6D1811079B003FBA3B /* iReBeaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iReBeaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3E1A6E1811079B003FBA3B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -68,6 +72,15 @@
 		DD6BCB67181120A8001A04EC /* RBDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDeal.m; sourceTree = "<group>"; };
 		DD6BCB691811238B001A04EC /* RBDepartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDepartment.h; sourceTree = "<group>"; };
 		DD6BCB6A1811238B001A04EC /* RBDepartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDepartment.m; sourceTree = "<group>"; };
+		EF287F061818857E0053EF53 /* RBCouponListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCouponListViewController.h; sourceTree = "<group>"; };
+		EF287F071818857E0053EF53 /* RBCouponListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCouponListViewController.m; sourceTree = "<group>"; };
+		EF287F09181887090053EF53 /* RBDealListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDealListViewController.h; sourceTree = "<group>"; };
+		EF287F0A181887090053EF53 /* RBDealListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDealListViewController.m; sourceTree = "<group>"; };
+		EF287F0C181887160053EF53 /* RBProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBProductListViewController.h; sourceTree = "<group>"; };
+		EF287F0D181887160053EF53 /* RBProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBProductListViewController.m; sourceTree = "<group>"; };
+		EFF9843318188151002A72BE /* RBDepartmentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDepartmentListViewController.h; sourceTree = "<group>"; };
+		EFF9843418188151002A72BE /* RBDepartmentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDepartmentListViewController.m; sourceTree = "<group>"; };
+		EFFC704A18187E8600E251CE /* ReBeaconCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReBeaconCommon.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,13 +144,21 @@
 			isa = PBXGroup;
 			children = (
 				DD3E1A8418110F66003FBA3B /* models */,
+				DD3E1A561811079B003FBA3B /* Supporting Files */,
+				DD3E1A671811079B003FBA3B /* Images.xcassets */,
+				DD3E1A611811079B003FBA3B /* Main.storyboard */,
 				DD3E1A5E1811079B003FBA3B /* RBAppDelegate.h */,
 				DD3E1A5F1811079B003FBA3B /* RBAppDelegate.m */,
-				DD3E1A611811079B003FBA3B /* Main.storyboard */,
-				DD3E1A641811079B003FBA3B /* RBViewController.h */,
-				DD3E1A651811079B003FBA3B /* RBViewController.m */,
-				DD3E1A671811079B003FBA3B /* Images.xcassets */,
-				DD3E1A561811079B003FBA3B /* Supporting Files */,
+				DD3E1A641811079B003FBA3B /* RBAccessViewController.h */,
+				DD3E1A651811079B003FBA3B /* RBAccessViewController.m */,
+				EFF9843318188151002A72BE /* RBDepartmentListViewController.h */,
+				EFF9843418188151002A72BE /* RBDepartmentListViewController.m */,
+				EF287F061818857E0053EF53 /* RBCouponListViewController.h */,
+				EF287F071818857E0053EF53 /* RBCouponListViewController.m */,
+				EF287F09181887090053EF53 /* RBDealListViewController.h */,
+				EF287F0A181887090053EF53 /* RBDealListViewController.m */,
+				EF287F0C181887160053EF53 /* RBProductListViewController.h */,
+				EF287F0D181887160053EF53 /* RBProductListViewController.m */,
 			);
 			path = iReBeacon;
 			sourceTree = "<group>";
@@ -149,6 +170,7 @@
 				DD3E1A581811079B003FBA3B /* InfoPlist.strings */,
 				DD3E1A5B1811079B003FBA3B /* main.m */,
 				DD3E1A5D1811079B003FBA3B /* iReBeacon-Prefix.pch */,
+				EFFC704A18187E8600E251CE /* ReBeaconCommon.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -319,12 +341,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF287F0B181887090053EF53 /* RBDealListViewController.m in Sources */,
 				DD3E1A601811079B003FBA3B /* RBAppDelegate.m in Sources */,
 				DD3E1A5C1811079B003FBA3B /* main.m in Sources */,
-				DD3E1A661811079B003FBA3B /* RBViewController.m in Sources */,
+				EFF9843518188151002A72BE /* RBDepartmentListViewController.m in Sources */,
+				DD3E1A661811079B003FBA3B /* RBAccessViewController.m in Sources */,
 				DD6BCB6B1811238B001A04EC /* RBDepartment.m in Sources */,
+				EF287F0E181887160053EF53 /* RBProductListViewController.m in Sources */,
 				DD6BCB68181120A8001A04EC /* RBDeal.m in Sources */,
 				DD6BCB6518111B27001A04EC /* RBCoupon.m in Sources */,
+				EF287F081818857E0053EF53 /* RBCouponListViewController.m in Sources */,
 				DD6BCB62181114EE001A04EC /* RBProduct.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
