@@ -86,10 +86,17 @@ static RBLocationManager *_sharedInstance = nil;
 }
 
 - (void)propgateBeacon:(CLBeacon *)beacon {
-    // fire notification to update displayed status
-    [[NSNotificationCenter defaultCenter] postNotificationName:kBeaconNotification
+    // propagate closest beacon info
+    [[NSNotificationCenter defaultCenter] postNotificationName:kClosestBeaconNotification
                                                         object:nil
                                                       userInfo:@{@"beacon" : beacon}];
+}
+
+- (void)collectBeacons:(NSArray *)beacons {
+    // propagate closest beacon info
+    [[NSNotificationCenter defaultCenter] postNotificationName:kBeaconListNotification
+                                                        object:nil
+                                                      userInfo:@{@"beacons" : beacons}];
 }
 
 #pragma mark - CBPeripheralManagerDelegate
@@ -234,14 +241,15 @@ static RBLocationManager *_sharedInstance = nil;
              or only once depending on the use case.  Optionally use major, minor values here to provide beacon-specific content
              */
             [self fireUpdateNotificationForStatus:@"You are really close by a beacon."];
-            [self propgateBeacon:closestBeacon];
+            
             
         } else if (closestBeacon.proximity == CLProximityNear) {
             // detect other nearby beacons
             // optionally hide previously displayed proximity based information
             [self fireUpdateNotificationForStatus:@"There are Beacons nearby."];
-            [self propgateBeacon:closestBeacon];
         }
+        [self propgateBeacon:closestBeacon];
+        [self collectBeacons:beacons];
     } else {
         // no beacons in range - signal may have been lost
         // optionally hide previously displayed proximity based information

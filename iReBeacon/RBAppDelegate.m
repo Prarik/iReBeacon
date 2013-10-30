@@ -19,6 +19,10 @@
 #import "RBDepartment.h"
 
 
+// Beacon Handler
+#import "RBBeaconHandler.h"
+
+
 @implementation RBAppDelegate
 
 + (RBAppDelegate*)appDelegate {
@@ -49,6 +53,8 @@
     [RBDeal registerSubclass];
     [RBCoupon registerSubclass];
     
+    
+    [RBBeaconHandler sharedHanlder];
     
     return YES;
 }

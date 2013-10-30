@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		312C9D90767145538550C4DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE7A0D365AE42F5846A961C /* libPods.a */; };
+		DD35C9101820E53700CAED88 /* RBBeaconHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD35C90F1820E53700CAED88 /* RBBeaconHandler.m */; };
 		DD3E1A501811079B003FBA3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A4F1811079B003FBA3B /* Foundation.framework */; };
 		DD3E1A521811079B003FBA3B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A511811079B003FBA3B /* CoreGraphics.framework */; };
 		DD3E1A541811079B003FBA3B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A531811079B003FBA3B /* UIKit.framework */; };
@@ -48,6 +49,8 @@
 /* Begin PBXFileReference section */
 		2AAD613E85B34402A4F9E08B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		BBE7A0D365AE42F5846A961C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD35C90E1820E53700CAED88 /* RBBeaconHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBeaconHandler.h; sourceTree = "<group>"; };
+		DD35C90F1820E53700CAED88 /* RBBeaconHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBeaconHandler.m; sourceTree = "<group>"; };
 		DD3E1A4C1811079B003FBA3B /* iReBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iReBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3E1A4F1811079B003FBA3B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DD3E1A511811079B003FBA3B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -227,6 +230,8 @@
 				DD4EC38C1820D92D005D5816 /* RBLocationManager.m */,
 				DD4EC38D1820D92D005D5816 /* RBBeaconRegion.h */,
 				DD4EC38E1820D92D005D5816 /* RBBeaconRegion.m */,
+				DD35C90E1820E53700CAED88 /* RBBeaconHandler.h */,
+				DD35C90F1820E53700CAED88 /* RBBeaconHandler.m */,
 			);
 			name = Communication;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				DD6BCB68181120A8001A04EC /* RBDeal.m in Sources */,
 				DD6BCB6518111B27001A04EC /* RBCoupon.m in Sources */,
 				EF287F081818857E0053EF53 /* RBCouponListViewController.m in Sources */,
+				DD35C9101820E53700CAED88 /* RBBeaconHandler.m in Sources */,
 				DD6BCB62181114EE001A04EC /* RBProduct.m in Sources */,
 				DD4EC3901820D92D005D5816 /* RBBeaconRegion.m in Sources */,
 			);
