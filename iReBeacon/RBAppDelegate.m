@@ -21,6 +21,10 @@
 
 @implementation RBAppDelegate
 
++ (RBAppDelegate*)appDelegate {
+    return (RBAppDelegate*)[UIApplication sharedApplication].delegate;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 

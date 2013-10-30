@@ -12,4 +12,14 @@
 // Facebook SDK
 #import <FacebookSDK/FacebookSDK.h>
 
+static NSString *kBeaconUUID = @"BD662418-0368-49EC-A9BC-7C43D1D14A10";
+static NSString *kBeaconRegionIdentifier = @"com.giuseppem.iReBeacon";
+static NSString *kLocationUpdateNotification = @"updateNotification";
+static NSString *kBeaconNotification = @"beaconNotification";
+
+typedef NS_ENUM(NSUInteger, RBApplicationMode) {
+    RBApplicationModePeripheral = 0,
+    RBApplicationModeRegionMonitoring
+};
+
 #endif
