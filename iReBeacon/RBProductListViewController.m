@@ -3,6 +3,8 @@
 //
 
 #import "RBProductListViewController.h"
+#import "RBProductCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation RBProductListViewController
 
@@ -125,25 +127,33 @@
  }
  */
 
-/*
+
  // Override to customize the look of a cell representing an object. The default is to display
  // a UITableViewCellStyleDefault style cell with the label being the textKey in the object,
  // and the imageView being the imageKey in the object.
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
- static NSString *CellIdentifier = @"Cell";
+ - (RBProductCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
+{
+    static NSString *CellIdentifier = @"ProductCell";
  
- PFTableViewCell *cell = (PFTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
- if (cell == nil) {
- cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
- }
- 
- // Configure the cell
- cell.textLabel.text = [object objectForKey:self.textKey];
- cell.imageView.file = [object objectForKey:self.imageKey];
- 
- return cell;
- }
- */
+    RBProductCell *cell = (RBProductCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[RBProductCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell
+    //cell.textLabel.text = [object objectForKey:self.textKey];
+    //cell.imageView.file = [object objectForKey:self.imageKey];
+    cell.productName.text = [object objectForKey:self.textKey];
+    cell.productBrand.text = [object objectForKey:@"brand"];
+    cell.featuredProduct.text = [object objectForKey:@"featured"];
+    
+    NSURL *imageURL = [NSURL URLWithString:[object objectForKey:@"pictureURL"]];
+    if (imageURL) {
+        [cell.productPicture setImageWithURL:imageURL];
+    }
+
+    return cell;
+}
 
 /*
  // Override if you need to change the ordering of objects in the table.

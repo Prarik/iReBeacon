@@ -42,6 +42,7 @@
  @param user        The user info object describing the logged in user
  */
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
+    NSLog(@"Logged in!");
     [self performSegueWithIdentifier:@"LOGIN_SEGUE" sender:self];
 }
 
@@ -65,7 +66,7 @@
  for error handling best practices.
  */
 - (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error {
-    
+    NSLog(@"Error: %@",[error localizedDescription]);
 }
 
 @end
