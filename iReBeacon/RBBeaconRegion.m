@@ -26,7 +26,7 @@ static RBBeaconRegion *_sharedInstance = nil;
     
     if (self) {
         self.notifyEntryStateOnDisplay = NO;     // only notify user if app is active
-        self.notifyOnEntry = NO;                 // don't notify user on region entrance
+        self.notifyOnEntry = YES;                 // don't notify user on region entrance
         self.notifyOnExit = YES;                 // notify user on region exit
     }
     

@@ -9,14 +9,14 @@
 #import "RBAppDelegate.h"
 
 // Facebook SDK
-#import <FacebookSDK/FacebookSDK.h>
-
-// Parse Framework
-#import <Parse/Parse.h>
-#import "RBProduct.h"
-#import "RBDeal.h"
-#import "RBCoupon.h"
-#import "RBDepartment.h"
+//#import <FacebookSDK/FacebookSDK.h>
+//
+//// Parse Framework
+//#import <Parse/Parse.h>
+//#import "RBProduct.h"
+//#import "RBDeal.h"
+//#import "RBCoupon.h"
+//#import "RBDepartment.h"
 
 
 // Beacon Handler
@@ -33,25 +33,25 @@
 {
 
     // Init Parse Framework
-    [Parse setApplicationId:@"CjCCEay3GsKEOU8fSt4fXOwueFcadW3u2v8tQQvs"
-                  clientKey:@"wTNipuNwfhBny33w0pdF5AwkLrrF7Ft7FlDCamvc"];
+//    [Parse setApplicationId:@"CjCCEay3GsKEOU8fSt4fXOwueFcadW3u2v8tQQvs"
+//                  clientKey:@"wTNipuNwfhBny33w0pdF5AwkLrrF7Ft7FlDCamvc"];
     
     // Init Parse Analytics
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+//    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     // Setting ACL
-    [PFUser enableAutomaticUser];
-    PFACL *defaultACL = [PFACL ACL];
+//    [PFUser enableAutomaticUser];
+//    PFACL *defaultACL = [PFACL ACL];
     // Optionally enable public read access while disabling public write access.
-    [defaultACL setPublicReadAccess:YES];
-    [defaultACL setPublicWriteAccess:YES];
-    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
+//    [defaultACL setPublicReadAccess:YES];
+//    [defaultACL setPublicWriteAccess:YES];
+//    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
     // Register parse subclasses
-    [RBDepartment registerSubclass];
-    [RBProduct registerSubclass];
-    [RBDeal registerSubclass];
-    [RBCoupon registerSubclass];
+//    [RBDepartment registerSubclass];
+//    [RBProduct registerSubclass];
+//    [RBDeal registerSubclass];
+//    [RBCoupon registerSubclass];
     
     
     [RBBeaconHandler sharedHanlder];
