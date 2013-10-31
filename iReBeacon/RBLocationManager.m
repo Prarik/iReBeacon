@@ -92,6 +92,20 @@ static RBLocationManager *_sharedInstance = nil;
                                                       userInfo:@{@"beacon" : beacon}];
 }
 
+- (void)fireEnterRegionNotification:(CLRegion *)region {
+    // propagate closest beacon info
+    [[NSNotificationCenter defaultCenter] postNotificationName:kEnterBeaconRegion
+                                                        object:nil
+                                                      userInfo:@{@"region" : region}];
+}
+
+- (void)fireExitRegionNotification:(CLRegion *)region {
+    // propagate closest beacon info
+    [[NSNotificationCenter defaultCenter] postNotificationName:kExitBeaconRegion
+                                                        object:nil
+                                                      userInfo:@{@"region" : region}];
+}
+
 - (void)collectBeacons:(NSArray *)beacons {
     // propagate closest beacon info
     [[NSNotificationCenter defaultCenter] postNotificationName:kBeaconListNotification
@@ -209,6 +223,9 @@ static RBLocationManager *_sharedInstance = nil;
         
         // start beacon ranging
         [self startBeaconRanging];
+        
+        [self fireEnterRegionNotification:region];
+        
     }
 }
 
@@ -228,6 +245,8 @@ static RBLocationManager *_sharedInstance = nil;
     
     // stop beacon ranging
     [manager stopRangingBeaconsInRegion:[RBBeaconRegion targetRegion]];
+    
+    [self fireExitRegionNotification:region];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {

@@ -108,7 +108,7 @@
     self.beaconInformationLabel.text = notification.userInfo[@"status"];
     
     // log message for debugging
-    NSLog(@"%@", notification.userInfo[@"status"]);
+//    NSLog(@"%@", notification.userInfo[@"status"]);
 }
 
 - (void)hanldeBeaconUpdate:(NSNotification*)notification {
@@ -117,7 +117,7 @@
     [self updateUIWithBeacon:notification.userInfo[@"beacon"]];
     
     // log message for debugging
-    NSLog(@"%@", notification.userInfo[@"beacon"]);
+//    NSLog(@"%@", notification.userInfo[@"beacon"]);
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "RBAccessViewController.h"
+#import <Parse/Parse.h>
 
 @interface RBAccessViewController () <FBLoginViewDelegate>
 
@@ -26,46 +27,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-#pragma mark - FB Access
-
-- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    
+- (IBAction)onLoginClick:(id)sender {
+    [PFFacebookUtils logInWithPermissions:nil block:^(PFUser *user, NSError *error) {
+//        if (!user) {
+//            NSLog(@"Uh oh. The user cancelled the Facebook login.");
+//        } else if (user.isNew) {
+//            NSLog(@"User signed up and logged in through Facebook!");
+//        } else {
+//            NSLog(@"User logged in through Facebook!");
+//        }
+        if (user) {
+            [self performSegueWithIdentifier:@"LOGIN_SEGUE" sender:self];
+        }
+    }];
 }
 
-/*!
- @abstract
- Tells the delegate that the view is has now fetched user info
- 
- @param loginView   The login view that transitioned its view mode
- 
- @param user        The user info object describing the logged in user
- */
-- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
-    [self performSegueWithIdentifier:@"LOGIN_SEGUE" sender:self];
-}
-
-/*!
- @abstract
- Tells the delegate that the view is now in logged out mode
- 
- @param loginView   The login view that transitioned its view mode
- */
-- (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
-    
-}
-
-/*!
- @abstract
- Tells the delegate that there is a communication or authorization error.
- 
- @param loginView           The login view that transitioned its view mode
- @param error               An error object containing details of the error.
- @discussion See https://developers.facebook.com/docs/technical-guides/iossdk/errors/
- for error handling best practices.
- */
-- (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error {
-    
-}
 
 @end

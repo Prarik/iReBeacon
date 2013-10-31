@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="sco-qk-OcH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -16,25 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uf0-xR-Ch5" customClass="FBLoginView">
-                                <rect key="frame" x="60" y="254" width="200" height="60"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnb-vc-TJl">
+                                <rect key="frame" x="116" y="262" width="89" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="lL9-cr-X61"/>
+                                    <action selector="onLoginClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Uk4-P3-Irh"/>
                                 </connections>
-                            </view>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Uf0-xR-Ch5" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="9ta-aK-gh9"/>
-                            <constraint firstItem="Uf0-xR-Ch5" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="AU7-ah-LOr"/>
-                            <constraint firstItem="Uf0-xR-Ch5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="60" id="KyO-Gj-aqU"/>
-                            <constraint firstItem="Uf0-xR-Ch5" firstAttribute="top" secondItem="4lC-Ba-1gP" secondAttribute="bottom" constant="234" id="uKr-Wa-ptf"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <segue destination="rfP-iW-zuZ" kind="modal" identifier="LOGIN_SEGUE" modalTransitionStyle="flipHorizontal" id="SUw-GT-v7R"/>
+                        <segue destination="rfP-iW-zuZ" kind="modal" identifier="LOGIN_SEGUE" id="lTc-fd-ZG8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -261,6 +259,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rfP-iW-zuZ" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="V0Z-lw-cvo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bfz-mf-0Fj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -30,6 +30,7 @@
 		DD6BCB6518111B27001A04EC /* RBCoupon.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB6418111B27001A04EC /* RBCoupon.m */; };
 		DD6BCB68181120A8001A04EC /* RBDeal.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB67181120A8001A04EC /* RBDeal.m */; };
 		DD6BCB6B1811238B001A04EC /* RBDepartment.m in Sources */ = {isa = PBXBuildFile; fileRef = DD6BCB6A1811238B001A04EC /* RBDepartment.m */; };
+		DDE2A7B91822447F009DA931 /* CLBeacon+toDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE2A7B81822447F009DA931 /* CLBeacon+toDictionary.m */; };
 		EF287F081818857E0053EF53 /* RBCouponListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287F071818857E0053EF53 /* RBCouponListViewController.m */; };
 		EF287F0B181887090053EF53 /* RBDealListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287F0A181887090053EF53 /* RBDealListViewController.m */; };
 		EF287F0E181887160053EF53 /* RBProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287F0D181887160053EF53 /* RBProductListViewController.m */; };
@@ -84,6 +85,8 @@
 		DD6BCB67181120A8001A04EC /* RBDeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDeal.m; sourceTree = "<group>"; };
 		DD6BCB691811238B001A04EC /* RBDepartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDepartment.h; sourceTree = "<group>"; };
 		DD6BCB6A1811238B001A04EC /* RBDepartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDepartment.m; sourceTree = "<group>"; };
+		DDE2A7B71822447F009DA931 /* CLBeacon+toDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLBeacon+toDictionary.h"; sourceTree = "<group>"; };
+		DDE2A7B81822447F009DA931 /* CLBeacon+toDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLBeacon+toDictionary.m"; sourceTree = "<group>"; };
 		EF287F061818857E0053EF53 /* RBCouponListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCouponListViewController.h; sourceTree = "<group>"; };
 		EF287F071818857E0053EF53 /* RBCouponListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCouponListViewController.m; sourceTree = "<group>"; };
 		EF287F09181887090053EF53 /* RBDealListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDealListViewController.h; sourceTree = "<group>"; };
@@ -157,9 +160,11 @@
 			children = (
 				DD4EC3811820CC07005D5816 /* Communication */,
 				DD3E1A8418110F66003FBA3B /* Models */,
+				DDE2A7BA18224719009DA931 /* Categories */,
 				DD3E1A561811079B003FBA3B /* Supporting Files */,
 				DD3E1A671811079B003FBA3B /* Images.xcassets */,
 				DD3E1A611811079B003FBA3B /* Main.storyboard */,
+				EFFC704A18187E8600E251CE /* ReBeaconCommon.h */,
 				DD3E1A5E1811079B003FBA3B /* RBAppDelegate.h */,
 				DD3E1A5F1811079B003FBA3B /* RBAppDelegate.m */,
 				DD3E1A641811079B003FBA3B /* RBAccessViewController.h */,
@@ -185,7 +190,6 @@
 				DD3E1A581811079B003FBA3B /* InfoPlist.strings */,
 				DD3E1A5B1811079B003FBA3B /* main.m */,
 				DD3E1A5D1811079B003FBA3B /* iReBeacon-Prefix.pch */,
-				EFFC704A18187E8600E251CE /* ReBeaconCommon.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -234,6 +238,15 @@
 				DD35C90F1820E53700CAED88 /* RBBeaconHandler.m */,
 			);
 			name = Communication;
+			sourceTree = "<group>";
+		};
+		DDE2A7BA18224719009DA931 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DDE2A7B71822447F009DA931 /* CLBeacon+toDictionary.h */,
+				DDE2A7B81822447F009DA931 /* CLBeacon+toDictionary.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +395,7 @@
 				DD6BCB6518111B27001A04EC /* RBCoupon.m in Sources */,
 				EF287F081818857E0053EF53 /* RBCouponListViewController.m in Sources */,
 				DD35C9101820E53700CAED88 /* RBBeaconHandler.m in Sources */,
+				DDE2A7B91822447F009DA931 /* CLBeacon+toDictionary.m in Sources */,
 				DD6BCB62181114EE001A04EC /* RBProduct.m in Sources */,
 				DD4EC3901820D92D005D5816 /* RBBeaconRegion.m in Sources */,
 			);

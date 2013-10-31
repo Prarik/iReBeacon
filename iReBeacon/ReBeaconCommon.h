@@ -17,6 +17,8 @@ static NSString *kBeaconRegionIdentifier = @"com.giuseppem.iReBeacon";
 static NSString *kLocationUpdateNotification = @"updateNotification";
 static NSString *kClosestBeaconNotification = @"closestBeaconNotification";
 static NSString *kBeaconListNotification = @"beaconListNotification";
+static NSString *kEnterBeaconRegion = @"enterBeaconRegion";
+static NSString *kExitBeaconRegion = @"exitBeaconRegion";
 
 typedef NS_ENUM(NSUInteger, RBApplicationMode) {
     RBApplicationModePeripheral = 0,
