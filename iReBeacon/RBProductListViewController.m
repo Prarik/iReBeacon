@@ -5,16 +5,19 @@
 #import "RBProductListViewController.h"
 #import "RBProductCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "RBProductDetailViewController.h"
 
 @implementation RBProductListViewController
 
+@synthesize tableView;
+/*
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
     }
     return self;
 }
-
+*/
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
@@ -141,8 +144,6 @@
     }
     
     // Configure the cell
-    //cell.textLabel.text = [object objectForKey:self.textKey];
-    //cell.imageView.file = [object objectForKey:self.imageKey];
     cell.productName.text = [object objectForKey:self.textKey];
     cell.productBrand.text = [object objectForKey:@"brand"];
     cell.featuredProduct.text = [object objectForKey:@"featured"];
@@ -155,12 +156,11 @@
     return cell;
 }
 
-/*
+
  // Override if you need to change the ordering of objects in the table.
  - (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
- return [self.objects objectAtIndex:indexPath.row];
+     return [self.objects objectAtIndex:indexPath.row];
  }
- */
 
 /*
  // Override to customize the look of the cell that allows the user to load the next page of objects.
@@ -220,6 +220,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    
+    [self performSegueWithIdentifier:@"productDetailSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"productDetailSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        RBProductDetailViewController *destViewController = segue.destinationViewController;
+        PFObject *object = [self objectAtIndex:indexPath];
+        
+        destViewController.productName = [object objectForKey:@"name"];
+        destViewController.productBrand = [object objectForKey:@"brand"];
+        //destViewController.featuredProduct = [object objectForKey:@"featured"];
+        destViewController.productDescription = [object objectForKey:@"description"];
+        
+        NSURL *imageURL = [NSURL URLWithString:[object objectForKey:@"pictureURL"]];
+        if (imageURL) {
+            [destViewController.productImage  setImageWithURL:imageURL];
+        }
+    }
 }
 
 @end
