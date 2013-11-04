@@ -79,7 +79,7 @@ static RBBeaconHandler *_sharedInstance = nil;
     self.counter++;
     if (self.counter > 10 && !self.uploading) {
         self.counter = 0;
-//        [self syncBeacons];
+        [self syncBeacons];
         [self checkUserCoupons];
     }
 }

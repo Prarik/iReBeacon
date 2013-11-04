@@ -22,7 +22,7 @@ static RBBeaconRegion *_sharedInstance = nil;
 
 - (id)init {
     
-    self = [super initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:kBeaconUUID] major:1 minor:1 identifier:kBeaconRegionIdentifier];
+    self = [super initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:kBeaconUUID] identifier:kBeaconRegionIdentifier];
     
     if (self) {
         self.notifyEntryStateOnDisplay = YES;     // only notify user if app is active
