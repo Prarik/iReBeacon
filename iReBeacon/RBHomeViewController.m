@@ -66,38 +66,32 @@
 
 
 -(void)updateUIWithBeacon:(CLBeacon *)beacon {
-    //    if (beacon.proximity == CLProximityUnknown) {
-    //        self.distanceLabel.text = @"Unknown Proximity";
-    //    } else if (beacon.proximity == CLProximityImmediate) {
-    //        self.distanceLabel.text = @"Immediate";
-    //    } else if (beacon.proximity == CLProximityNear) {
-    //        self.distanceLabel.text = @"Near";
-    //    } else if (beacon.proximity == CLProximityFar) {
-    //        self.distanceLabel.text = @"Far";
-    //    }
-    self.beaconInformationLabel.text = [NSString stringWithFormat:@"Major: %@\nMinor: %@\nAccuracy: %f\nProximity: %d\nRSSI: %li",
-                                        beacon.major,
-                                        beacon.minor,
-                                        beacon.accuracy,
-                                        beacon.proximity,
-                                        (long)beacon.rssi
+    
+    NSString *proximity = @"";
+    switch (beacon.proximity) {
+        case CLProximityFar:
+            proximity = @"ProximityFar";
+            break;
+        case CLProximityNear:
+            proximity = @"ProximityNear";
+            break;
+        case CLProximityImmediate:
+            proximity = @"ProximityImmediate";
+            break;
+        case CLProximityUnknown:
+        default:
+            proximity = @"ProximityUnknown";
+            break;
+    };
+    
+    self.beaconInformationLabel.text = [NSString stringWithFormat:@"Major: %@\nMinor: %@\nAccuracy: %0.2f\nProximity: %@\nRSSI: %li",
+                                            beacon.major,
+                                            beacon.minor,
+                                            beacon.accuracy,
+                                            proximity,
+                                            (long)beacon.rssi
                                         ];
     
-//    self.beaconFoundLabel.text = @"Yes";
-//    self.proximityUUIDLabel.text = beacon.proximityUUID.UUIDString;
-//    self.majorLabel.text = [NSString stringWithFormat:@"%@", beacon.major];
-//    self.minorLabel.text = [NSString stringWithFormat:@"%@", beacon.minor];
-//    self.accuracyLabel.text = [NSString stringWithFormat:@"%f", beacon.accuracy];
-//    if (beacon.proximity == CLProximityUnknown) {
-//        self.distanceLabel.text = @"Unknown Proximity";
-//    } else if (beacon.proximity == CLProximityImmediate) {
-//        self.distanceLabel.text = @"Immediate";
-//    } else if (beacon.proximity == CLProximityNear) {
-//        self.distanceLabel.text = @"Near";
-//    } else if (beacon.proximity == CLProximityFar) {
-//        self.distanceLabel.text = @"Far";
-//    }
-//    self.RSSILabel.text = [NSString stringWithFormat:@"%li", (long)beacon.rssi];
 }
 
 #pragma mark - Notifications

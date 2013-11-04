@@ -12,4 +12,6 @@
 
 + (instancetype)sharedHanlder;
 
+@property (strong, nonatomic) NSMutableDictionary *receivedUserCoupons;
+
 @end

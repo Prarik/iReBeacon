@@ -17,7 +17,8 @@
 #import "RBDeal.h"
 #import "RBCoupon.h"
 #import "RBDepartment.h"
-
+#import "RBUserStep.h"
+#import "RBUserCoupon.h"
 
 // Beacon Handler
 #import "RBBeaconHandler.h"
@@ -54,7 +55,8 @@
     [RBProduct registerSubclass];
     [RBDeal registerSubclass];
     [RBCoupon registerSubclass];
-    
+    [RBUserStep registerSubclass];
+    [RBUserCoupon registerSubclass];
     
     [RBBeaconHandler sharedHanlder];
     
