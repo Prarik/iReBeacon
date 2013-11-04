@@ -11,7 +11,8 @@
 
 #import "RBAppDelegate.h"
 
-@interface RBHomeViewController ()
+@interface RBHomeViewController () <UITableViewDataSource, UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextView *beaconInformationLabel;
 
 @end
@@ -35,20 +36,6 @@
         
         // Init beacon region manager monitoring
         [[RBLocationManager sharedManager] initializeRegionMonitoring];
-        
-        // add observer for location notifications
-//        [[NSNotificationCenter defaultCenter] addObserver:self
-//                                                 selector:@selector(handleStatusUpdate:)
-//                                                     name:kLocationUpdateNotification
-//                                                   object:nil];
-        
-        // add observer for beacons
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(hanldeBeaconUpdate:)
-                                                     name:kClosestBeaconNotification
-                                                   object:nil];
-
-
     }
     return self;
 }
@@ -65,53 +52,21 @@
 }
 
 
--(void)updateUIWithBeacon:(CLBeacon *)beacon {
-    
-    NSString *proximity = @"";
-    switch (beacon.proximity) {
-        case CLProximityFar:
-            proximity = @"ProximityFar";
-            break;
-        case CLProximityNear:
-            proximity = @"ProximityNear";
-            break;
-        case CLProximityImmediate:
-            proximity = @"ProximityImmediate";
-            break;
-        case CLProximityUnknown:
-        default:
-            proximity = @"ProximityUnknown";
-            break;
-    };
-    
-    self.beaconInformationLabel.text = [NSString stringWithFormat:@"Major: %@\nMinor: %@\nAccuracy: %0.2f\nProximity: %@\nRSSI: %li",
-                                            beacon.major,
-                                            beacon.minor,
-                                            beacon.accuracy,
-                                            proximity,
-                                            (long)beacon.rssi
-                                        ];
-    
-}
-
 #pragma mark - Notifications
 
-- (void)handleStatusUpdate:(NSNotification*)notification {
-    
-    // update status message displayed
-    self.beaconInformationLabel.text = notification.userInfo[@"status"];
-    
-    // log message for debugging
-//    NSLog(@"%@", notification.userInfo[@"status"]);
+#pragma mark - UiTable View
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
-
-- (void)hanldeBeaconUpdate:(NSNotification*)notification {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"DEAL";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    // update status message displayed
-    [self updateUIWithBeacon:notification.userInfo[@"beacon"]];
+    return cell;
     
-    // log message for debugging
-//    NSLog(@"%@", notification.userInfo[@"beacon"]);
 }
 
 @end

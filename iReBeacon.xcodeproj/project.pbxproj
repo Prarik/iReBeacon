@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		312C9D90767145538550C4DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE7A0D365AE42F5846A961C /* libPods.a */; };
+		DD12427F1827605B001AA24C /* home_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD12427E1827605B001AA24C /* home_image.jpg */; };
 		DD1CE6CF18272F6D002B58EB /* RBUserCouponHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1CE6CE18272F6D002B58EB /* RBUserCouponHandler.m */; };
 		DD35C9101820E53700CAED88 /* RBBeaconHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD35C90F1820E53700CAED88 /* RBBeaconHandler.m */; };
 		DD3E1A501811079B003FBA3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A4F1811079B003FBA3B /* Foundation.framework */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		2AAD613E85B34402A4F9E08B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		BBE7A0D365AE42F5846A961C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD12427E1827605B001AA24C /* home_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = home_image.jpg; sourceTree = "<group>"; };
 		DD1CE6CD18272F6D002B58EB /* RBUserCouponHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBUserCouponHandler.h; sourceTree = "<group>"; };
 		DD1CE6CE18272F6D002B58EB /* RBUserCouponHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBUserCouponHandler.m; sourceTree = "<group>"; };
 		DD35C90E1820E53700CAED88 /* RBBeaconHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBeaconHandler.h; sourceTree = "<group>"; };
@@ -132,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD12427D1827604A001AA24C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DD12427E1827605B001AA24C /* home_image.jpg */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		DD3E1A431811079B003FBA3B = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 		DD3E1A551811079B003FBA3B /* iReBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				DD12427D1827604A001AA24C /* Assets */,
 				DD4EC3811820CC07005D5816 /* Communication */,
 				DD3E1A8418110F66003FBA3B /* Models */,
 				DDE2A7BA18224719009DA931 /* Categories */,
@@ -343,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD12427F1827605B001AA24C /* home_image.jpg in Resources */,
 				DD3E1A681811079B003FBA3B /* Images.xcassets in Resources */,
 				DD3E1A5A1811079B003FBA3B /* InfoPlist.strings in Resources */,
 				DD3E1A631811079B003FBA3B /* Main.storyboard in Resources */,
