@@ -17,9 +17,18 @@
 #import "RBDeal.h"
 #import "RBCoupon.h"
 #import "RBDepartment.h"
+#import "RBUserStep.h"
+#import "RBUserCoupon.h"
+
+// Beacon Handler
+#import "RBBeaconHandler.h"
 
 
 @implementation RBAppDelegate
+
++ (RBAppDelegate*)appDelegate {
+    return (RBAppDelegate*)[UIApplication sharedApplication].delegate;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -30,6 +39,8 @@
     
     // Init Parse Analytics
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [PFFacebookUtils initializeFacebook];
     
     // Setting ACL
     [PFUser enableAutomaticUser];
@@ -44,7 +55,10 @@
     [RBProduct registerSubclass];
     [RBDeal registerSubclass];
     [RBCoupon registerSubclass];
+    [RBUserStep registerSubclass];
+    [RBUserCoupon registerSubclass];
     
+    [RBBeaconHandler sharedHanlder];
     
     return YES;
 }
@@ -76,12 +90,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [PFFacebookUtils handleOpenURL:url];
+}
+
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation
 {
-    return [FBSession.activeSession handleOpenURL:url];
+    return [PFFacebookUtils handleOpenURL:url];
 }
 
 @end

@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface RBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (nonatomic, assign) RBApplicationMode applicationMode;
+
++ (RBAppDelegate*)appDelegate;
 
 @end
