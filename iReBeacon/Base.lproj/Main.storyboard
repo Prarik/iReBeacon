@@ -166,18 +166,56 @@
         <scene sceneID="s5a-aF-WPb">
             <objects>
                 <tableViewController id="ozP-Bv-JK1" customClass="RBDepartmentListViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ckr-3K-6rW">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" id="ckr-3K-6rW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nr7-m4-eej">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DepartmentCell" rowHeight="65" id="nr7-m4-eej" customClass="RBDepartmentCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nr7-m4-eej" id="bgz-N1-sUA">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="255" translatesAutoresizingMaskIntoConstraints="NO" id="PzW-xx-8E5">
+                                            <rect key="frame" x="60" y="31" width="255" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Department Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGX-cs-tGN">
+                                            <rect key="frame" x="60" y="6" width="255" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ld8-Ld-2FS">
+                                            <rect key="frame" x="5" y="5" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="GhT-Vb-zrg"/>
+                                                <constraint firstAttribute="width" constant="50" id="xmZ-JA-Bwa"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GGX-cs-tGN" firstAttribute="trailing" secondItem="PzW-xx-8E5" secondAttribute="trailing" id="6Gx-Ax-9gh"/>
+                                        <constraint firstItem="GGX-cs-tGN" firstAttribute="top" secondItem="bgz-N1-sUA" secondAttribute="top" constant="6" id="71l-zR-XRP"/>
+                                        <constraint firstAttribute="trailing" secondItem="GGX-cs-tGN" secondAttribute="trailing" constant="5" id="Fl2-3H-HBo"/>
+                                        <constraint firstItem="GGX-cs-tGN" firstAttribute="leading" secondItem="Ld8-Ld-2FS" secondAttribute="trailing" constant="5" id="R1d-JZ-raa"/>
+                                        <constraint firstItem="Ld8-Ld-2FS" firstAttribute="leading" secondItem="bgz-N1-sUA" secondAttribute="leading" constant="5" id="WAe-Vd-In0"/>
+                                        <constraint firstItem="GGX-cs-tGN" firstAttribute="leading" secondItem="PzW-xx-8E5" secondAttribute="leading" id="Xla-TE-jn7"/>
+                                        <constraint firstItem="Ld8-Ld-2FS" firstAttribute="top" secondItem="bgz-N1-sUA" secondAttribute="top" constant="5" id="gIP-jp-NTQ"/>
+                                        <constraint firstItem="PzW-xx-8E5" firstAttribute="top" secondItem="GGX-cs-tGN" secondAttribute="bottom" constant="5" id="lrW-yn-zRn"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="departmentDescription" destination="PzW-xx-8E5" id="hJJ-Vk-DRh"/>
+                                    <outlet property="departmentImage" destination="Ld8-Ld-2FS" id="Gwk-AB-OIZ"/>
+                                    <outlet property="departmentName" destination="GGX-cs-tGN" id="rkd-n6-nuP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
