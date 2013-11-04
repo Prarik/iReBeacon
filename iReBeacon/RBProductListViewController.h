@@ -10,4 +10,6 @@
 
 @interface RBProductListViewController : PFQueryTableViewController
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
 @end

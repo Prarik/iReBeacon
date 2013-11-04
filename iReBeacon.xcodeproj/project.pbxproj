@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		312C9D90767145538550C4DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE7A0D365AE42F5846A961C /* libPods.a */; };
 		5200FEFD1827439900E980AE /* RBDepartmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5200FEFC1827439900E980AE /* RBDepartmentCell.m */; };
+		5200FF001827F3BB00E980AE /* RBProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5200FEFF1827F3BB00E980AE /* RBProductDetailViewController.m */; };
 		52AA89BF1821430B00BBD112 /* RBProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AA89BE1821430B00BBD112 /* RBProductCell.m */; };
 		DD3E1A501811079B003FBA3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A4F1811079B003FBA3B /* Foundation.framework */; };
 		DD3E1A521811079B003FBA3B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A511811079B003FBA3B /* CoreGraphics.framework */; };
@@ -48,6 +49,8 @@
 		2AAD613E85B34402A4F9E08B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		5200FEFB1827439900E980AE /* RBDepartmentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDepartmentCell.h; sourceTree = "<group>"; };
 		5200FEFC1827439900E980AE /* RBDepartmentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDepartmentCell.m; sourceTree = "<group>"; };
+		5200FEFE1827F3BB00E980AE /* RBProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBProductDetailViewController.h; sourceTree = "<group>"; };
+		5200FEFF1827F3BB00E980AE /* RBProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBProductDetailViewController.m; sourceTree = "<group>"; };
 		52AA89BD1821430B00BBD112 /* RBProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBProductCell.h; sourceTree = "<group>"; };
 		52AA89BE1821430B00BBD112 /* RBProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBProductCell.m; sourceTree = "<group>"; };
 		BBE7A0D365AE42F5846A961C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +168,8 @@
 				EF287F0A181887090053EF53 /* RBDealListViewController.m */,
 				EF287F0C181887160053EF53 /* RBProductListViewController.h */,
 				EF287F0D181887160053EF53 /* RBProductListViewController.m */,
+				5200FEFE1827F3BB00E980AE /* RBProductDetailViewController.h */,
+				5200FEFF1827F3BB00E980AE /* RBProductDetailViewController.m */,
 				52AA89BD1821430B00BBD112 /* RBProductCell.h */,
 				52AA89BE1821430B00BBD112 /* RBProductCell.m */,
 				5200FEFB1827439900E980AE /* RBDepartmentCell.h */,
@@ -364,6 +369,7 @@
 				DD6BCB6518111B27001A04EC /* RBCoupon.m in Sources */,
 				EF287F081818857E0053EF53 /* RBCouponListViewController.m in Sources */,
 				DD6BCB62181114EE001A04EC /* RBProduct.m in Sources */,
+				5200FF001827F3BB00E980AE /* RBProductDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
