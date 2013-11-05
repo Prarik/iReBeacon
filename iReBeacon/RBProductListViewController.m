@@ -3,16 +3,22 @@
 //
 
 #import "RBProductListViewController.h"
+#import "RBProductCell.h"
+#import "UIImageView+AFNetworking.h"
+#import "RBProductDetailViewController.h"
+#import "RBProductDetail.h"
 
 @implementation RBProductListViewController
 
+@synthesize tableView;
+/*
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
     }
     return self;
 }
-
+*/
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
@@ -125,32 +131,37 @@
  }
  */
 
-/*
+
  // Override to customize the look of a cell representing an object. The default is to display
  // a UITableViewCellStyleDefault style cell with the label being the textKey in the object,
  // and the imageView being the imageKey in the object.
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
- static NSString *CellIdentifier = @"Cell";
+ - (RBProductCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
+{
+    static NSString *CellIdentifier = @"ProductCell";
  
- PFTableViewCell *cell = (PFTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
- if (cell == nil) {
- cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
- }
- 
- // Configure the cell
- cell.textLabel.text = [object objectForKey:self.textKey];
- cell.imageView.file = [object objectForKey:self.imageKey];
- 
- return cell;
- }
- */
+    RBProductCell *cell = (RBProductCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[RBProductCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell
+    cell.productName.text = [object objectForKey:self.textKey];
+    cell.productBrand.text = [object objectForKey:@"brand"];
+    cell.featuredProduct.text = [object objectForKey:@"featured"];
+    
+    NSURL *imageURL = [NSURL URLWithString:[object objectForKey:@"pictureURL"]];
+    if (imageURL) {
+        [cell.productPicture setImageWithURL:imageURL];
+    }
 
-/*
+    return cell;
+}
+
+
  // Override if you need to change the ordering of objects in the table.
  - (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
- return [self.objects objectAtIndex:indexPath.row];
+     return [self.objects objectAtIndex:indexPath.row];
  }
- */
 
 /*
  // Override to customize the look of the cell that allows the user to load the next page of objects.
@@ -210,6 +221,26 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    
+    [self performSegueWithIdentifier:@"productDetailSegue" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"productDetailSegue"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        RBProductDetailViewController *destViewController = segue.destinationViewController;
+        PFObject *object = [self objectAtIndex:indexPath];
+        
+        RBProductDetail *detail = [[RBProductDetail alloc] init];
+        
+        detail.productName = [object objectForKey:@"name"];
+        detail.productBrand = [object objectForKey:@"brand"];
+        detail.productDescription = [object objectForKey:@"description"];
+        detail.featuredProduct = [object objectForKey:@"featured"];
+        detail.productImageURL = [object objectForKey:@"pictureURL"];
+        
+        destViewController.productDetail = detail;
+    }
 }
 
 @end

@@ -27,6 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)onLoginClick:(id)sender {
     [PFFacebookUtils logInWithPermissions:nil block:^(PFUser *user, NSError *error) {
 //        if (!user) {
@@ -41,6 +42,7 @@
         }
     }];
 }
+
 
 
 @end
