@@ -7,6 +7,7 @@
 //
 
 #import "RBProductDetailViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface RBProductDetailViewController ()
 
@@ -27,7 +28,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.productBrand
+    
+    self.productBrand.text = self.productDetail.productBrand;
+    self.productDescription.text = self.productDetail.productDescription;
+    self.productName.text = self.productDetail.productName;
+    
+    NSURL *imageURL = [NSURL URLWithString:self.productDetail.productImageURL];
+    if (imageURL) {
+        [self.productImage setImageWithURL:imageURL];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning

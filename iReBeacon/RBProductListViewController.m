@@ -6,6 +6,7 @@
 #import "RBProductCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "RBProductDetailViewController.h"
+#import "RBProductDetail.h"
 
 @implementation RBProductListViewController
 
@@ -230,15 +231,15 @@
         RBProductDetailViewController *destViewController = segue.destinationViewController;
         PFObject *object = [self objectAtIndex:indexPath];
         
-        destViewController.productName = [object objectForKey:@"name"];
-        destViewController.productBrand = [object objectForKey:@"brand"];
-        //destViewController.featuredProduct = [object objectForKey:@"featured"];
-        destViewController.productDescription = [object objectForKey:@"description"];
+        RBProductDetail *detail = [[RBProductDetail alloc] init];
         
-        NSURL *imageURL = [NSURL URLWithString:[object objectForKey:@"pictureURL"]];
-        if (imageURL) {
-            [destViewController.productImage  setImageWithURL:imageURL];
-        }
+        detail.productName = [object objectForKey:@"name"];
+        detail.productBrand = [object objectForKey:@"brand"];
+        detail.productDescription = [object objectForKey:@"description"];
+        detail.featuredProduct = [object objectForKey:@"featured"];
+        detail.productImageURL = [object objectForKey:@"pictureURL"];
+        
+        destViewController.productDetail = detail;
     }
 }
 
