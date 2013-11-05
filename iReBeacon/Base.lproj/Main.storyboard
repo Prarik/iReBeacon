@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rfP-iW-zuZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -51,13 +51,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MPv-jM-LIG">
-                                <rect key="frame" x="20" y="233" width="280" height="315"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="enI-df-bHh">
+                                <rect key="frame" x="20" y="83" width="280" height="187"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -69,10 +66,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="beaconInformationLabel" destination="MPv-jM-LIG" id="tL8-51-2Wj"/>
+                        <outlet property="searchDisplayController" destination="jsG-3H-jTN" id="QiY-NF-Quf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKr-nl-U68" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="jsG-3H-jTN">
+                    <connections>
+                        <outlet property="delegate" destination="sco-qk-OcH" id="IWn-AN-O4I"/>
+                        <outlet property="searchContentsController" destination="sco-qk-OcH" id="1V5-wv-5XW"/>
+                        <outlet property="searchResultsDataSource" destination="sco-qk-OcH" id="D0T-3l-7yO"/>
+                        <outlet property="searchResultsDelegate" destination="sco-qk-OcH" id="aa2-fx-dG8"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1229" y="131"/>
         </scene>
@@ -106,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUd-Qk-enL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1963" y="543"/>
+            <point key="canvasLocation" x="1933" y="843"/>
         </scene>
         <!--Deal List View Controller - Deals-->
         <scene sceneID="Ss7-tC-tvy">
@@ -391,6 +396,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="home_image.jpg" width="659" height="315"/>
         <image name="profile.jpg" width="249" height="249"/>
         <image name="qr.png" width="3000" height="3000"/>
     </resources>
