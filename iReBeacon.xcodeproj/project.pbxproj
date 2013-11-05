@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		312C9D90767145538550C4DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE7A0D365AE42F5846A961C /* libPods.a */; };
+		D91F5FCB18286FEB006F39F4 /* RBCouponListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D91F5FCA18286FEB006F39F4 /* RBCouponListCell.m */; };
+		D9514B741821E47A0044A42A /* RBDealListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9514B731821E47A0044A42A /* RBDealListCell.m */; };
 		DD3E1A501811079B003FBA3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A4F1811079B003FBA3B /* Foundation.framework */; };
 		DD3E1A521811079B003FBA3B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A511811079B003FBA3B /* CoreGraphics.framework */; };
 		DD3E1A541811079B003FBA3B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A531811079B003FBA3B /* UIKit.framework */; };
@@ -45,6 +47,10 @@
 /* Begin PBXFileReference section */
 		2AAD613E85B34402A4F9E08B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		BBE7A0D365AE42F5846A961C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D91F5FC918286FEB006F39F4 /* RBCouponListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCouponListCell.h; sourceTree = "<group>"; };
+		D91F5FCA18286FEB006F39F4 /* RBCouponListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCouponListCell.m; sourceTree = "<group>"; };
+		D9514B721821E47A0044A42A /* RBDealListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDealListCell.h; sourceTree = "<group>"; };
+		D9514B731821E47A0044A42A /* RBDealListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDealListCell.m; sourceTree = "<group>"; };
 		DD3E1A4C1811079B003FBA3B /* iReBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iReBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD3E1A4F1811079B003FBA3B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DD3E1A511811079B003FBA3B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -155,8 +161,12 @@
 				EFF9843418188151002A72BE /* RBDepartmentListViewController.m */,
 				EF287F061818857E0053EF53 /* RBCouponListViewController.h */,
 				EF287F071818857E0053EF53 /* RBCouponListViewController.m */,
+				D91F5FC918286FEB006F39F4 /* RBCouponListCell.h */,
+				D91F5FCA18286FEB006F39F4 /* RBCouponListCell.m */,
 				EF287F09181887090053EF53 /* RBDealListViewController.h */,
 				EF287F0A181887090053EF53 /* RBDealListViewController.m */,
+				D9514B721821E47A0044A42A /* RBDealListCell.h */,
+				D9514B731821E47A0044A42A /* RBDealListCell.m */,
 				EF287F0C181887160053EF53 /* RBProductListViewController.h */,
 				EF287F0D181887160053EF53 /* RBProductListViewController.m */,
 			);
@@ -346,10 +356,12 @@
 				DD3E1A5C1811079B003FBA3B /* main.m in Sources */,
 				EFF9843518188151002A72BE /* RBDepartmentListViewController.m in Sources */,
 				DD3E1A661811079B003FBA3B /* RBAccessViewController.m in Sources */,
+				D9514B741821E47A0044A42A /* RBDealListCell.m in Sources */,
 				DD6BCB6B1811238B001A04EC /* RBDepartment.m in Sources */,
 				EF287F0E181887160053EF53 /* RBProductListViewController.m in Sources */,
 				DD6BCB68181120A8001A04EC /* RBDeal.m in Sources */,
 				DD6BCB6518111B27001A04EC /* RBCoupon.m in Sources */,
+				D91F5FCB18286FEB006F39F4 /* RBCouponListCell.m in Sources */,
 				EF287F081818857E0053EF53 /* RBCouponListViewController.m in Sources */,
 				DD6BCB62181114EE001A04EC /* RBProduct.m in Sources */,
 			);

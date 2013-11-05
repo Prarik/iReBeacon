@@ -9,5 +9,5 @@
 #import <Parse/Parse.h>
 
 @interface RBDealListViewController : PFQueryTableViewController
-
+@property (nonatomic, strong) NSMutableDictionary *cellSelectedStates;
 @end

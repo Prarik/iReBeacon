@@ -3,6 +3,9 @@
 //
 
 #import "RBCouponListViewController.h"
+#import "RBCouponListCell.h"
+
+static const float kCellHeight = 40.0f; //Unselected row height.
 
 @implementation RBCouponListViewController
 
@@ -36,6 +39,8 @@
         // The number of objects to show per page
         self.objectsPerPage = 25;
     }
+    //Create the dictionary to store selected states.
+    self.cellSelectedStates = [[NSMutableDictionary alloc] init];
     return self;
 }
 
@@ -58,6 +63,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];    //iOS 7 method.
+    }
+    self.title = @"Coupons";
 }
 
 - (void)viewDidUnload {
@@ -125,25 +135,35 @@
  }
  */
 
-/*
- // Override to customize the look of a cell representing an object. The default is to display
- // a UITableViewCellStyleDefault style cell with the label being the textKey in the object,
- // and the imageView being the imageKey in the object.
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
- static NSString *CellIdentifier = @"Cell";
- 
- PFTableViewCell *cell = (PFTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
- if (cell == nil) {
- cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
- }
- 
- // Configure the cell
- cell.textLabel.text = [object objectForKey:self.textKey];
- cell.imageView.file = [object objectForKey:self.imageKey];
- 
- return cell;
- }
- */
+
+// Override to customize the look of a cell representing an object. The default is to display
+// a UITableViewCellStyleDefault style cell with the label being the textKey in the object,
+// and the imageView being the imageKey in the object.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    static NSString *CellIdentifier = @"RBCouponListCell";
+    
+    RBCouponListCell *cell = (RBCouponListCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[RBCouponListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell
+    //cell.textLabel.text = [object objectForKey:self.textKey];
+    //cell.imageView.file = [object objectForKey:self.imageKey];
+    cell.descriptionLabel.text = [object objectForKey:self.textKey];
+    
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSNumber *selected = [self.cellSelectedStates objectForKey:indexPath];
+    if([selected intValue] == 1) {
+        return kCellHeight * 5.0;
+    }
+    else {
+        return kCellHeight;
+    }
+}
 
 /*
  // Override if you need to change the ordering of objects in the table.
@@ -210,6 +230,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    [self.tableView deselectRowAtIndexPath:indexPath animated:TRUE];
+    
+    //Get then toggle selection state.
+    NSNumber *selectedObject = [self.cellSelectedStates objectForKey:indexPath];
+    if (selectedObject == nil) {
+        selectedObject = [NSNumber numberWithInt:0];
+    }
+    selectedObject = [NSNumber numberWithInt:1 - [selectedObject intValue]];
+    
+    //Store selection state.
+    [self.cellSelectedStates setObject:selectedObject forKey:indexPath];
+    
+    //Update table view.
+    [self.tableView beginUpdates];
+    [self.tableView endUpdates];
 }
 
 @end
