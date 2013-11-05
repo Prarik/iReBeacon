@@ -37,6 +37,8 @@
 		EF287F081818857E0053EF53 /* RBCouponListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287F071818857E0053EF53 /* RBCouponListViewController.m */; };
 		EF287F0B181887090053EF53 /* RBDealListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287F0A181887090053EF53 /* RBDealListViewController.m */; };
 		EF287F0E181887160053EF53 /* RBProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287F0D181887160053EF53 /* RBProductListViewController.m */; };
+		EF379E941828768700775803 /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF379E931828768700775803 /* profile.jpg */; };
+		EF379E961828779500775803 /* qr.png in Resources */ = {isa = PBXBuildFile; fileRef = EF379E951828779500775803 /* qr.png */; };
 		EFF9843518188151002A72BE /* RBDepartmentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF9843418188151002A72BE /* RBDepartmentListViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,8 @@
 		EF287F0A181887090053EF53 /* RBDealListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDealListViewController.m; sourceTree = "<group>"; };
 		EF287F0C181887160053EF53 /* RBProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBProductListViewController.h; sourceTree = "<group>"; };
 		EF287F0D181887160053EF53 /* RBProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBProductListViewController.m; sourceTree = "<group>"; };
+		EF379E931828768700775803 /* profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpg; sourceTree = "<group>"; };
+		EF379E951828779500775803 /* qr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qr.png; sourceTree = "<group>"; };
 		EFF9843318188151002A72BE /* RBDepartmentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBDepartmentListViewController.h; sourceTree = "<group>"; };
 		EFF9843418188151002A72BE /* RBDepartmentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBDepartmentListViewController.m; sourceTree = "<group>"; };
 		EFFC704A18187E8600E251CE /* ReBeaconCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReBeaconCommon.h; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 		DD3E1A551811079B003FBA3B /* iReBeacon */ = {
 			isa = PBXGroup;
 			children = (
+				EF379E951828779500775803 /* qr.png */,
+				EF379E931828768700775803 /* profile.jpg */,
 				DD4EC3811820CC07005D5816 /* Communication */,
 				DD3E1A8418110F66003FBA3B /* Models */,
 				DDE2A7BA18224719009DA931 /* Categories */,
@@ -343,9 +349,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF379E961828779500775803 /* qr.png in Resources */,
 				DD3E1A681811079B003FBA3B /* Images.xcassets in Resources */,
 				DD3E1A5A1811079B003FBA3B /* InfoPlist.strings in Resources */,
 				DD3E1A631811079B003FBA3B /* Main.storyboard in Resources */,
+				EF379E941828768700775803 /* profile.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
