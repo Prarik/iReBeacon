@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		312C9D90767145538550C4DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE7A0D365AE42F5846A961C /* libPods.a */; };
-		DD12427F1827605B001AA24C /* home_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD12427E1827605B001AA24C /* home_image.jpg */; };
-		DD1CE6CF18272F6D002B58EB /* RBUserCouponHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1CE6CE18272F6D002B58EB /* RBUserCouponHandler.m */; };
-		DD35C9101820E53700CAED88 /* RBBeaconHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD35C90F1820E53700CAED88 /* RBBeaconHandler.m */; };
 		5200FEFD1827439900E980AE /* RBDepartmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5200FEFC1827439900E980AE /* RBDepartmentCell.m */; };
 		5200FF001827F3BB00E980AE /* RBProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5200FEFF1827F3BB00E980AE /* RBProductDetailViewController.m */; };
 		5200FF03182886F600E980AE /* RBProductDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 5200FF02182886F600E980AE /* RBProductDetail.m */; };
 		52AA89BF1821430B00BBD112 /* RBProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AA89BE1821430B00BBD112 /* RBProductCell.m */; };
+		DD12427F1827605B001AA24C /* home_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DD12427E1827605B001AA24C /* home_image.jpg */; };
+		DD1CE6CF18272F6D002B58EB /* RBUserCouponHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1CE6CE18272F6D002B58EB /* RBUserCouponHandler.m */; };
+		DD35C9101820E53700CAED88 /* RBBeaconHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = DD35C90F1820E53700CAED88 /* RBBeaconHandler.m */; };
 		DD3E1A501811079B003FBA3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A4F1811079B003FBA3B /* Foundation.framework */; };
 		DD3E1A521811079B003FBA3B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A511811079B003FBA3B /* CoreGraphics.framework */; };
 		DD3E1A541811079B003FBA3B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3E1A531811079B003FBA3B /* UIKit.framework */; };
@@ -591,7 +591,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iReBeacon/iReBeacon-Prefix.pch";
 				INFOPLIST_FILE = "iReBeacon/iReBeacon-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -605,7 +607,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iReBeacon/iReBeacon-Prefix.pch";
 				INFOPLIST_FILE = "iReBeacon/iReBeacon-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
